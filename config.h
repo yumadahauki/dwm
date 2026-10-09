@@ -16,8 +16,8 @@ static const int systraypinningfailfirst =
 static const int showsystray = 1; /* 0 means no systray */
 static const int showbar = 1;	  /* 0 means no bar */
 static const int topbar = 1;	  /* 0 means bottom bar */
-static const char *fonts[] = {"0xProto Nerd Font Mono:pixelsize=13", "Noto Sans CJK JP:pixelsize=13"};
-static const char dmenufont[] = "0xProto Nerd Font Mono:pixelsize=13";
+static const char *fonts[] = {"Terminus (TTF):pixelsize=16", "JF Dot Shinonome Gothic 16:pixelsize=16"};
+static const char dmenufont[] = "Terminus (TTF):pixelsize=16";
 
 #include "themes/latte.h"
 
@@ -133,11 +133,7 @@ static const Key keys[] = {
 	{MODKEY, XK_period, focusmon, {.i = +1}},
 	{MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
 	{MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
-	{0, XK_Print, spawn, {.v = screenshotcmd}}, // screenshot then copy
-	{MODKEY,
-	 XK_Print,
-	 spawn,
-	 {.v = screenshot_save_cmd}}, // screenshot then save
+    {MODKEY | ShiftMask, XK_s, spawn, {.v = screenshotcmd}},
 	{MODKEY | ShiftMask, XK_m, spawn, {.v = touchpadtogglecmd}}, // toggle touchpad
 	{0, XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd}},
 	{0, XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd}},
