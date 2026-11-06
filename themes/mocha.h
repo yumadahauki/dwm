@@ -1,8 +1,8 @@
 static const char col_gray1[] = "#1e1e2e";
 static const char col_gray2[] = "#313244";
 static const char col_gray3[] = "#cdd6f4";
-static const char col_gray4[] = "#bac2de";
-static const char col_accent[] = "#179299";
+static const char col_gray4[] = "#1e1e2e";
+static const char col_accent[] = "#94e2d5";
 
 /* ----------------------- palette ----------------------- */
 /* #f5e0dc #f2cdcd #f5c2e7 #cba6f7 #f38ba8 #eba0ac #fab387 */
