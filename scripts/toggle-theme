@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# 1.    $ sudo pacman -S xdg-desktop-portal xdg-desktop-portal-gtk dconf
+
+# 2.    ~/.config/xdg-desktop-portal/dwm-portals.conf
+#       [preferred]
+#       default=gtk
+
+cur=$(gsettings get org.gnome.desktop.interface color-scheme)
+if [ "$cur" = "'prefer-dark'" ]; then
+  gsettings set org.gnome.desktop.interface color-scheme prefer-light
+  gsettings set org.gnome.desktop.interface gtk-theme Adwaita
+else
+  gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+  gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
+fi
